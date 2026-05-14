@@ -3,6 +3,8 @@ import { Injectable, inject } from '@angular/core';
 import { Observable, catchError, map, of } from 'rxjs';
 import { Organization } from '../models/organization.model';
 import { API_BASE_URL } from './api.config';
+import { environment } from '../../../environments/environment';
+import { PilotDataService } from './pilot-data.service';
 import {
   Envelope,
   OrganizationDto,
@@ -15,15 +17,18 @@ import {
 export class OrganizationService {
   private http = inject(HttpClient);
   private base = inject(API_BASE_URL);
+  private pilot = inject(PilotDataService);
 
   /** Memberships for the authenticated user. */
   list(): Observable<Organization[]> {
+    if (environment.useStaticData) return this.pilot.listOrganizations();
     return this.http
       .get<Envelope<OrganizationDto[]>>(`${this.base}/organizations`)
       .pipe(unwrapList(mapOrganizationFromDto));
   }
 
   get(id: string): Observable<Organization> {
+    if (environment.useStaticData) return this.pilot.getOrganization(id);
     return this.http
       .get<Envelope<OrganizationDto>>(`${this.base}/organizations/${id}`)
       .pipe(unwrapItem(mapOrganizationFromDto));
@@ -31,6 +36,7 @@ export class OrganizationService {
 
   /** Admin-only: every org in the system. */
   listAdmin(): Observable<Organization[]> {
+    if (environment.useStaticData) return this.pilot.listOrganizations();
     return this.http
       .get<Envelope<OrganizationDto[]>>(`${this.base}/admin/organizations`)
       .pipe(unwrapList(mapOrganizationFromDto));
@@ -78,6 +84,7 @@ export class OrganizationService {
   listMembers(orgId?: string): Observable<OrganizationMember[]> {
     const id = orgId ?? '';
     if (!id) return of([]);
+    if (environment.useStaticData) return of([]);
     return this.http
       .get<Envelope<OrganizationMemberDto[]>>(`${this.base}/organizations/${id}/members`)
       .pipe(

@@ -145,32 +145,23 @@ export class SidebarComponent {
 
   private clientSections: NavSection[] = [
     {
-      heading: 'Overview',
+      heading: '',
       items: [
         { label: 'Dashboard', route: '/dashboard', icon: ICONS.dashboard },
-        { label: 'My Sites', route: '/map', icon: ICONS.map },
-      ],
-    },
-    {
-      heading: 'Field Work',
-      items: [
-        { label: 'Site Visits', route: '/site-visits', icon: ICONS.siteVisits },
-        { label: 'Sampling', route: '/sampling', icon: ICONS.sampling },
         { label: 'Treatments', route: '/treatments', icon: ICONS.treatments },
       ],
     },
     {
-      heading: 'Catalog',
+      heading: 'Collect Data',
       items: [
-        { label: 'Systems', route: '/systems', icon: ICONS.systems },
-        { label: 'Products', route: '/products', icon: ICONS.treatments },
+        { label: 'Sampling', route: '/sampling', icon: ICONS.sampling },
+        { label: 'Site Visits', route: '/site-visits', icon: ICONS.siteVisits },
       ],
     },
     {
-      heading: 'Organization',
+      heading: 'Reference',
       items: [
-        { label: 'People', route: '/people', icon: ICONS.clients },
-        { label: 'Reports', route: '/reports', icon: ICONS.reports },
+        { label: 'Products', route: '/products', icon: ICONS.treatments },
       ],
     },
   ];

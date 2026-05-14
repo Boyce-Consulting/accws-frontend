@@ -3,14 +3,18 @@ import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product, ProductCategory } from '../models/product.model';
 import { API_BASE_URL } from './api.config';
+import { environment } from '../../../environments/environment';
+import { PilotDataService } from './pilot-data.service';
 import { Envelope, ProductDto, mapProductFromDto, unwrapItem, unwrapList } from './adapters';
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {
   private http = inject(HttpClient);
   private base = inject(API_BASE_URL);
+  private pilot = inject(PilotDataService);
 
   list(category?: ProductCategory): Observable<Product[]> {
+    if (environment.useStaticData) return this.pilot.listProducts(category);
     const params = category ? new HttpParams().set('category', category) : undefined;
     return this.http
       .get<Envelope<ProductDto[]>>(`${this.base}/products`, { params })
@@ -18,6 +22,7 @@ export class ProductService {
   }
 
   get(id: string): Observable<Product> {
+    if (environment.useStaticData) return this.pilot.getProduct(id);
     return this.http
       .get<Envelope<ProductDto>>(`${this.base}/products/${id}`)
       .pipe(unwrapItem(mapProductFromDto));

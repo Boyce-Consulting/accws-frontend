@@ -1,0 +1,1218 @@
+{
+  "$schema_version": "1.0.0",
+  "generated_at": "2026-05-12",
+  "source": "ACCWS Pilot Testers Google Drive folder (Apr 27 2026)",
+  "notes": "Static seed data for 9 pilot sites (13 lagoon plans). Snake_case keys + ISO dates so a Laravel seeder/resource can consume this directly. Sundre and Parkland County plans not yet available.",
+  "products": [
+    {
+      "sku": "sludge_rx",
+      "name": "Sludge Rx",
+      "category": "sludge-reduction",
+      "season": "warm",
+      "form": "pelletized microbial",
+      "description": "Pelletized microbial blend for warm months that penetrates sludge and breaks down complex organics. Often paired with OxyPaks XL."
+    },
+    {
+      "sku": "polar_rx",
+      "name": "Polar Rx",
+      "category": "sludge-reduction",
+      "season": "cold",
+      "form": "microbial",
+      "description": "Cold-weather sludge treatment, active down to 1.5 C. Extends treatment season and supports ammonia reduction in cold transitions. Typically paired with VitaStim Polar."
+    },
+    {
+      "sku": "vitastim_polar",
+      "name": "VitaStim Polar",
+      "category": "bioaugmentation",
+      "season": "cold",
+      "form": "microbial blend",
+      "description": "Cold-weather microbial blend that maintains biological activity in colder months. Stabilizes ammonia, TSS, and cBOD."
+    },
+    {
+      "sku": "vitastim_sludge_reducer",
+      "name": "VitaStim Sludge Reducer",
+      "category": "bioaugmentation",
+      "season": "warm",
+      "form": "microbial blend",
+      "description": "Warm-season biological. Enhances digestion of solids before sludge formation, supports denser nutrient-sequestering sludge."
+    },
+    {
+      "sku": "oxypaks_xl",
+      "name": "OxyPaks XL",
+      "category": "oxygenation",
+      "season": "warm",
+      "form": "granular",
+      "description": "Granular oxygen-releasing compound that boosts microbial activity in the sludge layer. Loosens sludge surface and helps reduce odours."
+    },
+    {
+      "sku": "qwik_zyme_l",
+      "name": "Qwik-Zyme L",
+      "category": "enzyme",
+      "season": "year-round",
+      "form": "liquid",
+      "description": "Lipase-rich liquid enzyme that breaks down FOG into bioavailable nutrients. Reduces grease buildup, supports VFA production."
+    },
+    {
+      "sku": "qwik_zyme_p",
+      "name": "Qwik-Zyme P",
+      "category": "enzyme",
+      "season": "year-round",
+      "form": "liquid",
+      "description": "Protease enzyme that breaks down complex proteins into amino acids. Improves VFA production and supports phosphorus uptake."
+    },
+    {
+      "sku": "bug_on_a_rope",
+      "name": "Bug on a Rope",
+      "category": "lift-station",
+      "season": "year-round",
+      "form": "slow-release brick",
+      "description": "Slow-dissolving microbial brick for lift stations. Releases grease-eating bacteria and mild oxygen source; controls FOG and H2S."
+    },
+    {
+      "sku": "greasezilla",
+      "name": "GreaseZilla",
+      "category": "lift-station",
+      "season": "year-round",
+      "form": "liquid",
+      "description": "Liquid microbial degreaser with concentrated bacteria and biocatalysts for severe FOG issues in lift stations and force mains."
+    },
+    {
+      "sku": "natures_blend",
+      "name": "Nature's Blend",
+      "category": "polishing",
+      "season": "warm",
+      "form": "dry probiotic",
+      "description": "Dry probiotic for storage cells. Targets soluble nutrients and stimulates biological nutrient removal under carbon-limited conditions."
+    },
+    {
+      "sku": "polar_blend",
+      "name": "Polar Blend",
+      "category": "polishing",
+      "season": "cold",
+      "form": "dry probiotic",
+      "description": "Cold-season counterpart to Nature's Blend. Boosts floc formation and biological nutrient removal at low temperatures."
+    },
+    {
+      "sku": "total_floc",
+      "name": "Total Floc",
+      "category": "polishing",
+      "season": "spring",
+      "form": "liquid",
+      "description": "Biological flocculant and phosphorus binder. Binds and removes phosphorus while reducing BOD, TSS, and total nitrogen."
+    },
+    {
+      "sku": "ultrasonic_algae_control",
+      "name": "Ultrasonic Algae Control (HBS SolaRaft-QDB)",
+      "category": "equipment",
+      "season": "warm",
+      "form": "equipment",
+      "description": "Suspended ultrasonic transducer that emits 360-degree ultrasonic waves to disrupt algae growth. Stabilizes pH/DO without chemicals."
+    },
+    {
+      "sku": "lift_station_aeration",
+      "name": "Lift Station Aeration",
+      "category": "equipment",
+      "season": "year-round",
+      "form": "equipment",
+      "description": "120L compressor + 50 ft self-sinking air hose for lift station aeration. Suspends solids, breaks up FOG, reduces odors."
+    }
+  ],
+  "organizations": [
+    {
+      "slug": "kehewin-cree-nation",
+      "name": "Kehewin Cree Nation",
+      "type": "single-use",
+      "status": "prospect",
+      "province": "AB",
+      "contact_name": "Shannon Gladue",
+      "systems": [
+        {
+          "slug": "kehewin-lagoon",
+          "name": "Kehewin Cree Nation Lagoon",
+          "type": "lagoon",
+          "status": "attention",
+          "commissioned_year": 2011,
+          "age_years": 15,
+          "population": 1000,
+          "flow_m3_per_day": 35,
+          "septage_m3_per_day": 10,
+          "ever_dredged": false,
+          "cells": [
+            { "name": "Cell 1", "area_acres": 0.23, "area_m2": 925, "volume_m3": 1200, "function": "anaerobic", "retention_days": 8.6 },
+            { "name": "Cell 2", "area_acres": 0.23, "area_m2": 925, "volume_m3": 1200, "function": "anaerobic", "retention_days": 48.6 },
+            { "name": "Cell 3", "area_acres": 4.69, "area_m2": 19000, "volume_m3": 24170, "function": "facultative", "retention_days": 172.6 },
+            { "name": "Cell 4", "area_acres": 16.60, "area_m2": 67200, "volume_m3": 153580, "function": "storage", "retention_days": 1097 }
+          ]
+        }
+      ],
+      "treatment_plans": [
+        {
+          "slug": "kehewin-2026",
+          "system_slug": "kehewin-lagoon",
+          "year": 2026,
+          "status": "draft",
+          "prepared_for": "Shannon Gladue",
+          "prepared_by": "Jacy Hingley",
+          "plan_date": "2026-02-12",
+          "executive_summary": "15-year-old multi-cell lagoon serving ~1,000 people, never dredged. Currently meeting federal WSER limits for cBOD/TSS/un-ionized ammonia. Both 2024 effluent samples show negative removal for phosphorus and COD (benthic feedback) - lagoon is releasing stored nutrients, signaling approach to sludge capacity. First-year biological optimization to stabilize nitrification, improve sludge digestion, and reduce phosphorus release before WSER exceedance becomes a risk.",
+          "objectives": [
+            "Protect compliance margin for cBOD/TSS/un-ionized ammonia",
+            "Reduce internal P and COD release from accumulated sludge",
+            "Establish sludge survey baseline (Spring 2026) for long-term dredging decision"
+          ],
+          "effluent_samples": [
+            { "date": "2024-06-06", "type": "influent", "ph": 7.79, "tss": 62.2, "cbod": 76.6, "cod": 178, "ammonia_total": 15.6, "ammonia_unionized": 0.433, "nitrogen_total": 20.5, "phosphorus_total": 0.2 },
+            { "date": "2024-11-05", "type": "influent", "ph": 7.58, "tss": 74.6, "cbod": 16.2, "cod": 82, "ammonia_total": 6.92, "ammonia_unionized": 0.0528, "nitrogen_total": 8.38, "phosphorus_total": 0.969 },
+            { "date": "2024-06-06", "type": "effluent", "ph": 9.87, "tss": 24, "cbod": 4.4, "cod": 167, "ammonia_total": 0.43, "ammonia_unionized": 0.212, "nitrogen_total": 5.86, "phosphorus_total": 0.894 },
+            { "date": "2024-11-05", "type": "effluent", "ph": 8.98, "tss": 14.2, "cbod": null, "cod": 221, "ammonia_total": 1.02, "ammonia_unionized": 0.165, "nitrogen_total": 6.64, "phosphorus_total": 3.53 }
+          ],
+          "tiers": [
+            {
+              "name": "recommended",
+              "dosing_schedules": [
+                { "zone": "Main Lift Station", "product_sku": "vitastim_polar", "quantity_lbs": 1, "frequency": "weekly", "months": [12, 1] },
+                { "zone": "Cell 1", "product_sku": "sludge_rx", "quantity_lbs": 15, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Cell 2", "product_sku": "sludge_rx", "quantity_lbs": 10, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Cell 1", "product_sku": "polar_rx", "quantity_lbs": 15, "frequency": "monthly", "months": [5, 6, 10, 11] },
+                { "zone": "Cell 2", "product_sku": "polar_rx", "quantity_lbs": 10, "frequency": "monthly", "months": [5, 6, 10, 11] },
+                { "zone": "Cell 1", "product_sku": "oxypaks_xl", "quantity_lbs": 25, "frequency": "monthly", "months": [5, 6, 7, 8, 9, 10] },
+                { "zone": "Cell 1-2", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 0.5, "frequency": "weekly", "months": [7, 8, 9], "notes": "0.5 lb/week each cell" },
+                { "zone": "Cell 1-2", "product_sku": "vitastim_polar", "quantity_lbs": 0.5, "frequency": "weekly", "months": [5, 6, 10, 11], "notes": "0.5 lb/week each cell" }
+              ],
+              "pricing": [
+                { "description": "VitaStim Sludge Reducer 30LB Pail", "unit_price": 870, "qty": 1, "subtotal": 870 },
+                { "description": "VitaStim Polar 30LB Pail", "unit_price": 920, "qty": 1, "subtotal": 920 },
+                { "description": "Polar Rx 30LB Bag", "unit_price": 890, "qty": 4, "subtotal": 3560 },
+                { "description": "Sludge Rx 30LB Bag", "unit_price": 810, "qty": 3, "subtotal": 2430 },
+                { "description": "OxyPaks XL 50LB Pail", "unit_price": 600, "qty": 2, "subtotal": 1200 }
+              ],
+              "subtotal": 8980,
+              "gst": 0,
+              "total": 8980,
+              "currency": "CAD"
+            }
+          ],
+          "monitoring": {
+            "effluent_parameters": ["ammonia_n", "nitrate", "nitrite", "tss", "phosphorus_total", "orthophosphate", "cbod", "ph"],
+            "additional_sampling": "Add September event before fall release; June early-season event if feasible",
+            "sludge_survey": { "first_year": 2026, "frequency_years": [2, 3], "scope": "All cells 1-4" }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "town-of-wainwright",
+      "name": "Town of Wainwright",
+      "type": "single-use",
+      "status": "active",
+      "province": "AB",
+      "contact_name": "Trevor Miller",
+      "systems": [
+        {
+          "slug": "wainwright-lagoon",
+          "name": "Wainwright Lagoon",
+          "type": "lagoon",
+          "status": "attention",
+          "population": 6600,
+          "flow_m3_per_day": 3000,
+          "last_dredged_year": 2020,
+          "next_dredge_planned_year": 2026,
+          "discharge": "continuous to Bushy Head Lake / Battle River",
+          "permit_constraint": "Dosing restricted to upstream manholes/lift stations only; no direct lagoon dosing",
+          "cells": [
+            { "name": "Aerated Front Cell", "function": "treatment", "retention_days": 2, "notes": "Fully aerated - disrupts anaerobic phase needed for EBPR" },
+            { "name": "Polishing Cell 1", "function": "facultative", "retention_days": 30 },
+            { "name": "Polishing Cell 2", "function": "facultative", "retention_days": 30 },
+            { "name": "Storage Cell", "function": "storage" }
+          ]
+        }
+      ],
+      "treatment_plans": [
+        {
+          "slug": "wainwright-2026",
+          "system_slug": "wainwright-lagoon",
+          "year": 2026,
+          "status": "draft",
+          "prepared_for": "Trevor Miller",
+          "prepared_by": "Jacy Hingley",
+          "plan_date": "2025-09-15",
+          "executive_summary": "Aerated front cell eliminates the anaerobic step EBPR needs, leaving ~4 mg/L effluent PO4-P. Plan compensates via upstream enzymatic hydrolysis at lift station/manhole (permit-compliant) to generate VFAs that support PAOs.",
+          "objectives": [
+            "Reduce effluent PO4-P from ~4 mg/L toward <=2 mg/L (40-60% reduction target)",
+            "Maintain low ammonia and stable BOD/TSS",
+            "Reduce odor at industrial lift station wet well",
+            "Sludge survey 2025/early 2026 ahead of 2026 dredging"
+          ],
+          "effluent_samples": [
+            { "date": "2024-01-01", "type": "effluent", "cbod": 6, "tss": 13, "phosphorus_total": 3.79 },
+            { "date": "2024-06-01", "type": "effluent", "cbod": 4, "tss": 10, "phosphorus_total": 4.13 },
+            { "date": "2024-12-01", "type": "effluent", "cbod": 5, "tss": 10 },
+            { "date": "2025-06-01", "type": "effluent", "phosphorus_total": 4.74 }
+          ],
+          "tiers": [
+            {
+              "name": "recommended",
+              "dosing_schedules": [
+                { "zone": "Upstream Manhole", "product_sku": "qwik_zyme_l", "quantity_liters": 2, "frequency": "Tue/Thu", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+                { "zone": "Upstream Manhole", "product_sku": "qwik_zyme_p", "quantity_liters": 1.5, "frequency": "Mon/Wed/Fri", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+                { "zone": "Upstream Manhole", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 1, "frequency": "Mon/Wed/Fri", "months": [7, 8, 9] },
+                { "zone": "Upstream Manhole", "product_sku": "vitastim_polar", "quantity_lbs": 1, "frequency": "Mon/Wed/Fri", "months": [1, 2, 3, 4, 5, 6, 10, 11, 12] }
+              ],
+              "pricing": [
+                { "description": "VitaStim Polar 30LB Pail", "unit_price": 920, "qty": 4, "subtotal": 3680 },
+                { "description": "VitaStim Sludge Reducer 30LB Pail", "unit_price": 870, "qty": 1, "subtotal": 870 },
+                { "description": "Qwik-Zyme L 55 Gallons", "unit_price": 3070, "qty": 1, "subtotal": 3070 },
+                { "description": "Qwik-Zyme P 55 Gallons", "unit_price": 4290, "qty": 1, "subtotal": 4290 }
+              ],
+              "subtotal": 11910,
+              "gst": 595.50,
+              "total": 12505.50,
+              "currency": "CAD"
+            }
+          ],
+          "monitoring": {
+            "effluent_parameters": ["ammonia_n", "phosphorus_total", "orthophosphate", "cbod", "tss"],
+            "sludge_survey": { "first_year": 2025, "frequency_years": [1, 2], "vendor": "Hydrasurvey", "scope": "All 7 cells baseline; Cells 1-5 tracking" }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "town-of-fox-creek",
+      "name": "Town of Fox Creek",
+      "type": "single-use",
+      "status": "prospect",
+      "province": "AB",
+      "contact_name": "Darren McDonough",
+      "systems": [
+        {
+          "slug": "fox-creek-lagoon",
+          "name": "Fox Creek Lagoon",
+          "type": "lagoon",
+          "status": "attention",
+          "population": 1735,
+          "peak_population": 10000,
+          "flow_m3_per_day": 770,
+          "last_dredged_year": 2019,
+          "discharge": "spring + optional fall release; effluent sold to fracking when possible",
+          "cells": [
+            { "name": "Anaerobic 1", "area_acres": 0.54, "area_m2": 2200, "volume_m3": 4960, "function": "anaerobic", "sludge_volume_m3": 1240 },
+            { "name": "Anaerobic 2", "area_acres": 0.54, "area_m2": 2200, "volume_m3": 4960, "function": "anaerobic", "sludge_volume_m3": 1240 },
+            { "name": "Anaerobic 3", "area_acres": 0.62, "area_m2": 2500, "volume_m3": 5830, "function": "anaerobic", "sludge_volume_m3": 1458 },
+            { "name": "Anaerobic 4", "area_acres": 0.62, "area_m2": 2500, "volume_m3": 5830, "function": "anaerobic", "sludge_volume_m3": 1458 },
+            { "name": "Facultative 1", "area_acres": 7.35, "area_m2": 29740, "volume_m3": 47500, "function": "facultative" },
+            { "name": "Facultative 2", "area_acres": 6.12, "area_m2": 24770, "volume_m3": 38500, "function": "facultative" },
+            { "name": "Storage 1", "area_acres": 8.02, "area_m2": 32460, "volume_m3": 97300, "function": "storage" },
+            { "name": "Storage 2", "area_acres": 6.31, "area_m2": 25530, "volume_m3": 81000, "function": "storage" },
+            { "name": "Storage 3", "area_acres": 6.05, "area_m2": 24500, "volume_m3": 82000, "function": "storage" },
+            { "name": "Storage 4", "area_acres": 20.92, "area_m2": 84650, "volume_m3": 263000, "function": "storage" }
+          ]
+        }
+      ],
+      "treatment_plans": [
+        {
+          "slug": "fox-creek-2025",
+          "system_slug": "fox-creek-lagoon",
+          "year": 2025,
+          "status": "draft",
+          "prepared_for": "Darren McDonough",
+          "prepared_by": "Jacy Hingley",
+          "plan_date": "2025-08-01",
+          "executive_summary": "Sludge has resurged in anaerobic cells (estimated 25-50% volume) only 5 years after 2019 mechanical dredging. Council wary of another dredge cycle; biological sludge reduction targets Cells 1-4 to reclaim hydraulic capacity and stabilize spring ammonia/BOD spikes.",
+          "objectives": [
+            "Reduce 25-50% sludge occupancy in anaerobic cells",
+            "Delay next mechanical dredge by 3+ years",
+            "Control spring ammonia rebound and BOD spikes (April 2023 was 19.3 / 53.3 mg/L)"
+          ],
+          "effluent_samples": [
+            { "date": "2021-08-24", "type": "effluent", "ammonia_total": 2.89, "bod": 3, "nitrogen_total": 4.9, "tss": 10.7, "ph": 8.54 },
+            { "date": "2023-04-19", "type": "effluent", "ammonia_total": 19.30, "bod": 53.3, "tss": 9.3, "ph": 7.25 },
+            { "date": "2024-09-11", "type": "effluent", "ammonia_total": 6.43, "bod": 7.5, "nitrogen_total": 7.8, "tss": 9 }
+          ],
+          "tiers": [
+            {
+              "name": "recommended",
+              "dosing_schedules": [
+                { "zone": "Main Lift Station", "product_sku": "vitastim_polar", "quantity_lbs": 3, "frequency": "weekly", "months": [12, 1] },
+                { "zone": "Cells 1-4", "product_sku": "polar_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [5, 6, 10, 11], "notes": "30 lb/month each cell" },
+                { "zone": "Cells 1-4", "product_sku": "sludge_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [7, 8, 9], "notes": "30 lb/month each cell" },
+                { "zone": "Cells 1-4", "product_sku": "oxypaks_xl", "quantity_lbs": 50, "frequency": "monthly", "months": [7, 8, 9], "notes": "50 lb/month each cell" },
+                { "zone": "Cells 1-4", "product_sku": "vitastim_polar", "quantity_lbs": 1, "frequency": "weekly", "months": [5, 6, 10, 11], "notes": "1 lb/week each cell" },
+                { "zone": "Cells 1-4", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 1, "frequency": "weekly", "months": [7, 8, 9], "notes": "1 lb/week each cell" }
+              ],
+              "pricing": [
+                { "description": "Polar Rx 30 LB Bag", "unit_price": 890, "qty": 16, "subtotal": 14240 },
+                { "description": "Sludge Rx 30 LB Bag", "unit_price": 810, "qty": 12, "subtotal": 9720 },
+                { "description": "VitaStim Polar 30 LB Pail", "unit_price": 920, "qty": 5, "subtotal": 4600 },
+                { "description": "VitaStim Sludge Reducer 30 LB Pail", "unit_price": 870, "qty": 2, "subtotal": 1740 },
+                { "description": "OxyPaks XL 50 LB Pail", "unit_price": 600, "qty": 16, "subtotal": 9600 }
+              ],
+              "subtotal": 39900,
+              "volume_discount": -4792,
+              "gst": 1755.40,
+              "total": 36863.40,
+              "currency": "CAD"
+            }
+          ],
+          "monitoring": {
+            "effluent_parameters": ["ammonia_n", "tss", "phosphorus_total", "cbod", "ph"],
+            "sludge_survey": { "frequency_years": [3, 4, 5] }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "town-of-carstairs",
+      "name": "Town of Carstairs",
+      "type": "single-use",
+      "status": "active",
+      "province": "AB",
+      "contact_name": "Robert Alcorn",
+      "systems": [
+        {
+          "slug": "carstairs-lagoon",
+          "name": "Carstairs Lagoon",
+          "type": "lagoon",
+          "status": "healthy",
+          "population": 5200,
+          "cells": [
+            { "name": "Cell 1", "area_acres": 0.49, "area_m2": 2000, "volume_m3": 3909, "function": "anaerobic", "retention_days": 3.0 },
+            { "name": "Cell 2", "area_acres": 0.49, "area_m2": 2000, "volume_m3": 3909, "function": "anaerobic", "retention_days": 3.0 },
+            { "name": "Cell 3", "area_acres": 0.49, "area_m2": 2000, "volume_m3": 3909, "function": "anaerobic", "retention_days": 3.0 },
+            { "name": "Cell 4", "area_acres": 0.49, "area_m2": 2000, "volume_m3": 3909, "function": "anaerobic", "retention_days": 3.0 },
+            { "name": "Cell 5", "area_acres": 2.08, "area_m2": 8400, "volume_m3": 16232, "function": "facultative", "retention_days": 12.3 },
+            { "name": "Cell 6", "area_acres": 53.87, "area_m2": 218000, "volume_m3": 601307, "function": "storage", "retention_days": 453.8 }
+          ]
+        }
+      ],
+      "treatment_plans": [
+        {
+          "slug": "carstairs-2026",
+          "system_slug": "carstairs-lagoon",
+          "year": 2026,
+          "status": "draft",
+          "prepared_for": "Robert Alcorn",
+          "prepared_by": "Jacy Hingley",
+          "plan_date": "2026-03-05",
+          "executive_summary": "Effluent currently strong but rapid population growth + I&I increasing hydraulic load. Risk is capacity preservation (sludge accumulation in anaerobic cells) rather than acute effluent failure. Three-tier offering with set-pricing option for budget predictability.",
+          "objectives": [
+            "Protect biological activity in anaerobic cells",
+            "Extend dredging interval",
+            "Maintain budget discipline aligned with Town's flow meter / I&I priorities"
+          ],
+          "effluent_samples": [
+            { "date": "2024-09-13", "type": "effluent", "ph": 8.00, "cbod": 3.20, "tss": 15, "ammonia_total": 8.12 },
+            { "date": "2024-10-16", "type": "effluent", "ph": 8.4, "cbod": 3.3, "tss": 4, "ammonia_total": 6.07 },
+            { "date": "2025-09-25", "type": "effluent", "ph": 8.2, "cbod": 4.2, "tss": 5, "ammonia_total": 9.77 },
+            { "date": "2025-11-04", "type": "effluent", "ph": 8.1, "cbod": 3.4, "tss": null, "ammonia_total": 11.15 }
+          ],
+          "tiers": [
+            {
+              "name": "best",
+              "label": "Best (Full System Management)",
+              "dosing_schedules": [
+                { "zone": "Collection System", "product_sku": "vitastim_polar", "quantity_lbs": 3, "frequency": "weekly", "months": [12, 1] },
+                { "zone": "Lift Station", "product_sku": "bug_on_a_rope", "quantity_lbs": 9, "frequency": "every 2-3 months", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+                { "zone": "Lift Station", "product_sku": "greasezilla", "quantity_liters": 2, "frequency": "Tue/Thu", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+                { "zone": "Cells 1-4", "product_sku": "vitastim_polar", "quantity_lbs": 1.5, "frequency": "weekly", "months": [5, 6, 10, 11], "notes": "1.5 lb/week each cell" },
+                { "zone": "Cells 1-4", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 1, "frequency": "weekly", "months": [7, 8, 9], "notes": "1 lb/week each cell" },
+                { "zone": "Cells 1-4", "product_sku": "sludge_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [7, 8, 9], "notes": "30 lb/month each cell" },
+                { "zone": "Cells 1-4", "product_sku": "polar_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [5, 6, 10, 11], "notes": "30 lb/month each cell" },
+                { "zone": "Cells 1-4", "product_sku": "oxypaks_xl", "quantity_lbs": 50, "frequency": "monthly", "months": [5, 6, 7, 8, 9, 10], "notes": "50 lb/month each cell" }
+              ],
+              "pricing": [
+                { "description": "Sludge Rx 30 LB Bag", "unit_price": 810, "qty": 12, "subtotal": 9720 },
+                { "description": "Polar Rx 30 LB Bag", "unit_price": 890, "qty": 16, "subtotal": 14240 },
+                { "description": "OxyPaks XL 50 LB Pail", "unit_price": 600, "qty": 16, "subtotal": 9600 },
+                { "description": "Bug on a Rope Sr (4x9LB)", "unit_price": 990, "qty": 1, "subtotal": 990 },
+                { "description": "GreaseZilla 55 Gal Drum", "unit_price": 3350, "qty": 1, "subtotal": 3350 },
+                { "description": "VitaStim Polar 30 LB Pail", "unit_price": 920, "qty": 6, "subtotal": 5520 },
+                { "description": "VitaStim Sludge Reducer 30 LB Pail", "unit_price": 870, "qty": 2, "subtotal": 1740 }
+              ],
+              "subtotal": 45160,
+              "gst": 2258,
+              "total": 47418,
+              "currency": "CAD"
+            },
+            {
+              "name": "good",
+              "label": "Good (Recommended)",
+              "dosing_schedules": [
+                { "zone": "Collection System", "product_sku": "vitastim_polar", "quantity_lbs": 2, "frequency": "weekly", "months": [12, 1] },
+                { "zone": "Lift Station", "product_sku": "greasezilla", "quantity_liters": 2, "frequency": "Tue/Thu", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+                { "zone": "Cells 1-4", "product_sku": "vitastim_polar", "quantity_lbs": 1, "frequency": "weekly", "months": [5, 6, 10, 11], "notes": "1 lb/week each cell" },
+                { "zone": "Cells 1-2", "product_sku": "sludge_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [7, 8, 9], "notes": "30 lb/month each cell" },
+                { "zone": "Cells 3-4", "product_sku": "sludge_rx", "quantity_lbs": 15, "frequency": "monthly", "months": [7, 8, 9], "notes": "15 lb/month each cell" },
+                { "zone": "Cells 1-2", "product_sku": "polar_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [5, 6, 10, 11], "notes": "30 lb/month each cell" },
+                { "zone": "Cells 1-2", "product_sku": "oxypaks_xl", "quantity_lbs": 25, "frequency": "monthly", "months": [5, 6, 7, 8, 9, 10], "notes": "25 lb/month each cell" }
+              ],
+              "pricing": [
+                { "description": "Sludge Rx 30 LB Bag", "unit_price": 810, "qty": 9, "subtotal": 7290 },
+                { "description": "Polar Rx 30 LB Bag", "unit_price": 890, "qty": 12, "subtotal": 10680 },
+                { "description": "OxyPaks XL 50 LB Pail", "unit_price": 600, "qty": 4, "subtotal": 2400 },
+                { "description": "GreaseZilla 55 Gal Drum", "unit_price": 3350, "qty": 1, "subtotal": 3350 },
+                { "description": "VitaStim Polar 30 LB Pail", "unit_price": 920, "qty": 4, "subtotal": 3680 }
+              ],
+              "subtotal": 27400,
+              "gst": 1370,
+              "total": 28770,
+              "currency": "CAD"
+            },
+            {
+              "name": "basic",
+              "label": "Basic (Sludge Maintenance)",
+              "dosing_schedules": [
+                { "zone": "Cells 1-4", "product_sku": "sludge_rx", "quantity_lbs": 15, "frequency": "monthly", "months": [7, 8, 9], "notes": "15 lb/month each cell" },
+                { "zone": "Cells 1-4", "product_sku": "polar_rx", "quantity_lbs": 15, "frequency": "monthly", "months": [5, 6, 10, 11], "notes": "15 lb/month each cell" }
+              ],
+              "pricing": [
+                { "description": "Sludge Rx 30 LB Bag", "unit_price": 810, "qty": 6, "subtotal": 4860 },
+                { "description": "Polar Rx 30 LB Bag", "unit_price": 890, "qty": 8, "subtotal": 7120 },
+                { "description": "GreaseZilla 55 Gal Drum (optional)", "unit_price": 3350, "qty": 1, "subtotal": 3350 },
+                { "description": "VitaStim Polar 30 LB Pail (optional)", "unit_price": 920, "qty": 2, "subtotal": 1840 }
+              ],
+              "subtotal": 17170,
+              "gst": 858.50,
+              "total": 18028.50,
+              "currency": "CAD",
+              "notes": "3-year set pricing available with CPI cap"
+            }
+          ],
+          "monitoring": {
+            "effluent_parameters": ["nitrate", "nitrite", "ammonia", "phosphorus_total", "orthophosphate", "tss", "cbod", "ph"],
+            "sludge_survey": { "first_year": 1, "frequency_years": [2, 5], "vendor": "Hydrasurvey", "scope": "Full baseline year 1; Cells 1-2 tracking after" }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "town-of-redwater",
+      "name": "Town of Redwater",
+      "type": "single-use",
+      "status": "active",
+      "province": "AB",
+      "contact_name": "Chris Cook",
+      "systems": [
+        {
+          "slug": "redwater-lagoon",
+          "name": "Redwater Lagoon",
+          "type": "lagoon",
+          "status": "attention",
+          "population": 2115,
+          "flow_m3_per_day": 722,
+          "discharge": "bi-annual (typical); spring ammonia control is critical",
+          "cells": [
+            { "name": "Cell 1", "area_acres": 0.44, "area_m2": 1765, "volume_m3": 3094, "function": "anaerobic", "retention_days": 4 },
+            { "name": "Cell 2", "area_acres": 1.85, "area_m2": 7500, "volume_m3": 42000, "function": "facultative", "retention_days": 58, "notes": "Aerated facultative" },
+            { "name": "Cell 3", "area_acres": 1.85, "area_m2": 7500, "volume_m3": 54000, "function": "facultative", "retention_days": 75, "notes": "Aerated facultative" },
+            { "name": "Cell 4", "area_acres": 12.41, "area_m2": 50226, "volume_m3": 109251, "function": "storage", "retention_days": 151 },
+            { "name": "Cell 5", "area_acres": 5.44, "area_m2": 22000, "volume_m3": 52651, "function": "storage", "retention_days": 73 },
+            { "name": "Cell 6", "area_acres": 6.92, "area_m2": 28000, "volume_m3": 79088, "function": "storage", "retention_days": 110 },
+            { "name": "Industrial 1", "function": "anaerobic", "area_acres": 0.15, "area_m2": 600, "volume_m3": 702 },
+            { "name": "Industrial 2", "function": "anaerobic", "area_acres": 0.15, "area_m2": 600, "volume_m3": 702 },
+            { "name": "Industrial 3", "function": "anaerobic", "area_acres": 0.15, "area_m2": 600, "volume_m3": 702 },
+            { "name": "Industrial 4", "function": "anaerobic", "area_acres": 0.15, "area_m2": 600, "volume_m3": 702 }
+          ]
+        }
+      ],
+      "treatment_plans": [
+        {
+          "slug": "redwater-2026",
+          "system_slug": "redwater-lagoon",
+          "year": 2026,
+          "status": "draft",
+          "prepared_for": "Chris Cook",
+          "prepared_by": "Jacy Hingley",
+          "plan_date": "2025-10-24",
+          "executive_summary": "Aerated lagoon performs well in warm months but has predictable spring ammonia vulnerability (cold + high pH from algae). 2025 data: April ammonia 5.34 mg/L (unionized ~0.68 mg/L). Plan adds cold-weather bioaugmentation, Cell 1-2 sludge maintenance, year-round upstream Qwik-Zyme L, and optional ultrasonic in storage cell.",
+          "objectives": [
+            "Suppress spring ammonia rebound (target unionized <0.3 mg/L)",
+            "Reduce internal phosphorus release from Cell 1-2 sludge",
+            "Control summer algae-driven TSS via optional ultrasonic"
+          ],
+          "effluent_samples": [
+            { "date": "2025-01-01", "type": "effluent", "cbod": 8.00, "tss": 9 },
+            { "date": "2025-02-01", "type": "effluent", "cbod": 11.00, "tss": 8.5 },
+            { "date": "2025-04-01", "type": "effluent", "cbod": 8.30, "tss": 7.3 },
+            { "date": "2025-05-01", "type": "effluent", "cbod": 7.70, "tss": 21 },
+            { "date": "2024-10-30", "type": "effluent", "ammonia_total": 0.46, "ammonia_unionized": 0.056, "ph": 8.73 },
+            { "date": "2025-04-24", "type": "effluent", "ammonia_total": 5.34, "ammonia_unionized": 0.68, "ph": 8.73, "phosphorus_total": 3.26 },
+            { "date": "2025-05-14", "type": "effluent", "ammonia_total": 0.916, "ammonia_unionized": 0.252, "ph": 9.14, "phosphorus_total": 0.77 }
+          ],
+          "tiers": [
+            {
+              "name": "best",
+              "label": "Best (Quickest Most Effective)",
+              "dosing_schedules": [
+                { "zone": "Main Lift Station", "product_sku": "vitastim_polar", "quantity_lbs": 3, "frequency": "weekly", "months": [12, 1] },
+                { "zone": "Main Lift Station", "product_sku": "qwik_zyme_l", "quantity_ml": 100, "frequency": "Mon/Wed/Fri", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+                { "zone": "Cell 1", "product_sku": "sludge_rx", "quantity_lbs": 10, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Cell 2", "product_sku": "sludge_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [7, 8, 9], "notes": "Concentrate at edges and inlet" },
+                { "zone": "Cell 1", "product_sku": "vitastim_polar", "quantity_lbs": 1.5, "frequency": "weekly", "months": [5, 6, 10, 11] },
+                { "zone": "Cell 2-3", "product_sku": "vitastim_polar", "quantity_lbs": 3.5, "frequency": "weekly", "months": [5, 6, 10, 11], "notes": "3.5 lb/week each cell" },
+                { "zone": "Cell 1", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 1.5, "frequency": "weekly", "months": [7, 8, 9] },
+                { "zone": "Cell 2-3", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 3.5, "frequency": "weekly", "months": [7, 8, 9], "notes": "3.5 lb/week each cell" },
+                { "zone": "Cell 3", "product_sku": "ultrasonic_algae_control", "quantity_units": 1, "frequency": "continuous", "months": [5, 6, 7, 8, 9] }
+              ],
+              "pricing": [
+                { "description": "Sludge Rx 30 LB Bag", "unit_price": 810, "qty": 4, "subtotal": 3240 },
+                { "description": "VitaStim Polar 30 LB Pail", "unit_price": 920, "qty": 7, "subtotal": 6440 },
+                { "description": "VitaStim Sludge Reducer 30 LB Pail", "unit_price": 870, "qty": 4, "subtotal": 3480 },
+                { "description": "Qwik-Zyme L 5 Gallon Case", "unit_price": 350, "qty": 6, "subtotal": 2100 },
+                { "description": "HBS SolaRaft-QDB Ultrasonic", "unit_price": 19995, "qty": 1, "subtotal": 19995 }
+              ],
+              "subtotal": 35255,
+              "gst": 1762.75,
+              "total": 37017.75,
+              "currency": "CAD"
+            },
+            {
+              "name": "good",
+              "label": "Good (Budget-Friendly)",
+              "dosing_schedules": [
+                { "zone": "Main Lift Station", "product_sku": "vitastim_polar", "quantity_lbs": 3, "frequency": "weekly", "months": [12, 1] },
+                { "zone": "Cell 1", "product_sku": "sludge_rx", "quantity_lbs": 10, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Cell 2", "product_sku": "sludge_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Cell 1", "product_sku": "vitastim_polar", "quantity_lbs": 1.5, "frequency": "weekly", "months": [5, 6, 10, 11] },
+                { "zone": "Cell 2-3", "product_sku": "vitastim_polar", "quantity_lbs": 3.5, "frequency": "weekly", "months": [5, 6, 10, 11], "notes": "3.5 lb/week each cell" },
+                { "zone": "Cell 1", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 1.5, "frequency": "weekly", "months": [7, 8, 9] },
+                { "zone": "Cell 2-3", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 3.5, "frequency": "weekly", "months": [7, 8, 9], "notes": "3.5 lb/week each cell" }
+              ],
+              "pricing": [
+                { "description": "Sludge Rx 30 LB Bag", "unit_price": 810, "qty": 4, "subtotal": 3240 },
+                { "description": "VitaStim Polar 30 LB Pail", "unit_price": 920, "qty": 7, "subtotal": 6440 },
+                { "description": "VitaStim Sludge Reducer 30 LB Pail", "unit_price": 870, "qty": 4, "subtotal": 3480 }
+              ],
+              "subtotal": 13160,
+              "gst": 658,
+              "total": 13818,
+              "currency": "CAD"
+            }
+          ],
+          "monitoring": {
+            "sludge_survey": { "first_year": 1, "frequency_years": [1, 2, 3], "vendor": "Hydrasurvey", "scope": "All 10 cells baseline; Cells 1-3 tracking after" }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "town-of-raymond",
+      "name": "Town of Raymond",
+      "type": "single-use",
+      "status": "active",
+      "province": "AB",
+      "contact_name": "Jesse Salmon",
+      "systems": [
+        {
+          "slug": "raymond-lagoon",
+          "name": "Raymond Lagoon",
+          "type": "lagoon",
+          "status": "attention",
+          "population": 4200,
+          "flow_m3_per_day": 1400,
+          "discharge": "seasonal irrigation reuse (Cell 6 outlet)",
+          "cells": [
+            { "name": "Cell 1", "area_acres": 0.68, "area_m2": 2750, "volume_m3": 6564, "function": "anaerobic", "retention_days": 5 },
+            { "name": "Cell 2", "area_acres": 0.68, "area_m2": 2750, "volume_m3": 6564, "function": "anaerobic", "retention_days": 5 },
+            { "name": "Cell 3", "area_acres": 0.68, "area_m2": 2750, "volume_m3": 6564, "function": "anaerobic", "retention_days": 5 },
+            { "name": "Cell 4", "area_acres": 0.68, "area_m2": 2750, "volume_m3": 6564, "function": "anaerobic", "retention_days": 5 },
+            { "name": "Cell 5", "area_acres": 8.65, "area_m2": 35000, "volume_m3": 183336, "function": "facultative", "retention_days": 130 },
+            { "name": "Cell 6", "area_acres": 14.97, "area_m2": 60600, "volume_m3": 415507, "function": "storage", "retention_days": 445 }
+          ]
+        }
+      ],
+      "treatment_plans": [
+        {
+          "slug": "raymond-2026",
+          "system_slug": "raymond-lagoon",
+          "year": 2026,
+          "status": "draft",
+          "prepared_for": "Jesse Salmon",
+          "prepared_by": "Jacy Hingley",
+          "plan_date": "2025-09-12",
+          "executive_summary": "Late-summer pH spikes in Cell 6 (e.g., 9.71 in Sep 2024) restrict irrigation reuse. Root cause: algae blooms in shallow Cells 1-4. Plan suppresses algae at end of anaerobic train (Cell 4 ultrasonic) and uses seasonal bioaugmentation to control nutrient release.",
+          "objectives": [
+            "Effluent pH <=8.5 for >=90% of Aug-Sep measurements",
+            "Reduce odors at lift stations/headworks",
+            "Measured depth gains in Cells 1-4"
+          ],
+          "effluent_samples": [
+            { "date": "2020-04-01", "type": "effluent", "ammonia_total": 0.668, "bod": 3.3, "cod": 56, "ph": 8.07, "tss": 5.3 },
+            { "date": "2021-08-01", "type": "effluent", "ammonia_total": 0.125, "bod": 3.6, "cod": 55, "ph": 9.24, "tss": 19.7 },
+            { "date": "2023-04-01", "type": "effluent", "ammonia_total": 10.3, "bod": 13.5, "cod": 74, "ph": 7.63, "tss": 12, "notes": "Emergency wet-weather discharge outlier" },
+            { "date": "2024-09-01", "type": "effluent", "ammonia_total": 0.111, "bod": 2.5, "cod": 43, "ph": 9.71, "tss": 7 }
+          ],
+          "tiers": [
+            {
+              "name": "recommended",
+              "dosing_schedules": [
+                { "zone": "Main Lift Station", "product_sku": "vitastim_polar", "quantity_lbs": 3, "frequency": "weekly", "months": [12, 1] },
+                { "zone": "Cells 1-4", "product_sku": "polar_rx", "quantity_lbs": 20, "frequency": "monthly", "months": [5, 6, 10, 11], "notes": "20 lb/month each cell" },
+                { "zone": "Cells 1-4", "product_sku": "sludge_rx", "quantity_lbs": 20, "frequency": "monthly", "months": [7, 8, 9], "notes": "20 lb/month each cell" },
+                { "zone": "Cells 1-4", "product_sku": "vitastim_polar", "quantity_lbs": 2, "frequency": "weekly", "months": [5, 6, 10, 11], "notes": "2 lb/week each cell" },
+                { "zone": "Cells 1-4", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 1, "frequency": "weekly", "months": [7, 8, 9], "notes": "1 lb/week each cell" },
+                { "zone": "Cell 4", "product_sku": "ultrasonic_algae_control", "quantity_units": 1, "frequency": "continuous", "months": [5, 6, 7, 8, 9] },
+                { "zone": "Cell 6 (contingent)", "product_sku": "natures_blend", "quantity_lbs": 45, "frequency": "bi-weekly", "months": [6], "notes": "Trigger only if spring P>1 mg/L and ammonia>0.5 mg/L" },
+                { "zone": "Cell 6 (contingent)", "product_sku": "natures_blend", "quantity_lbs": 15, "frequency": "bi-weekly", "months": [7, 8, 9] }
+              ],
+              "pricing": [
+                { "description": "Sludge Rx 30LB Bag", "unit_price": 810, "qty": 8, "subtotal": 6480 },
+                { "description": "Polar Rx 30LB Bag", "unit_price": 890, "qty": 11, "subtotal": 9790 },
+                { "description": "VitaStim Polar 30LB Pail", "unit_price": 920, "qty": 7, "subtotal": 6440 },
+                { "description": "VitaStim Sludge Reducer 30LB Pail", "unit_price": 870, "qty": 2, "subtotal": 1740 },
+                { "description": "HBS SolaRaft-QDB Ultrasonic (optional)", "unit_price": 19995, "qty": 1, "subtotal": 19995 },
+                { "description": "Nature's Blend 30LB Pail (contingent)", "unit_price": 529, "qty": 7, "subtotal": 3703 }
+              ],
+              "subtotal": 48148,
+              "volume_discount": -1627,
+              "gst": 2326.05,
+              "total": 48847.05,
+              "currency": "CAD"
+            }
+          ],
+          "monitoring": {
+            "schedule_2026": [
+              { "month": 5, "parameters": ["ammonia", "phosphorus_total", "bod", "tss", "ph", "cod"] },
+              { "month": 7, "parameters": ["bod", "tss", "ph"] },
+              { "month": 9, "parameters": ["ammonia", "phosphorus_total", "bod", "tss", "ph", "cod"] }
+            ],
+            "sludge_survey": { "first_year": 1, "frequency_years": [1, 2], "vendor": "Hydrasurvey", "scope": "Cells 1-6 baseline; Cells 1-4 tracking" }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "town-of-stettler",
+      "name": "Town of Stettler",
+      "type": "single-use",
+      "status": "active",
+      "province": "AB",
+      "contact_name": "Grant McQuay",
+      "systems": [
+        {
+          "slug": "stettler-lagoon",
+          "name": "Stettler Lagoon & Wetland",
+          "type": "lagoon",
+          "status": "attention",
+          "population": 5500,
+          "discharge": "to wetland for final polishing",
+          "industrial_sources": ["butcher shop", "veterinary clinic", "expired dairy (grocery)"],
+          "cells": [
+            { "name": "Cell A", "area_acres": 1.11, "area_m2": 4500, "volume_m3": 11000, "function": "treatment" },
+            { "name": "Cell B", "area_acres": 1.06, "area_m2": 4300, "volume_m3": 12100, "function": "treatment" },
+            { "name": "Cell C", "area_acres": 1.33, "area_m2": 5370, "volume_m3": 10200, "function": "treatment" },
+            { "name": "Cell D", "area_acres": 1.33, "area_m2": 5400, "volume_m3": 15300, "function": "treatment" },
+            { "name": "Cell 5", "area_acres": 11.12, "area_m2": 45000, "volume_m3": 62000, "function": "facultative" },
+            { "name": "Cell 6", "area_acres": 15.57, "area_m2": 63000, "volume_m3": 98000, "function": "facultative" },
+            { "name": "Cell 7", "area_acres": 13.62, "area_m2": 55100, "volume_m3": 197073, "function": "storage" },
+            { "name": "Cell 8", "area_acres": 14.44, "area_m2": 58450, "volume_m3": 207713, "function": "storage" },
+            { "name": "Cell 9", "area_acres": 29.45, "area_m2": 119200, "volume_m3": 363000, "function": "storage" }
+          ]
+        }
+      ],
+      "treatment_plans": [
+        {
+          "slug": "stettler-2025-26",
+          "system_slug": "stettler-lagoon",
+          "year": 2025,
+          "status": "draft",
+          "prepared_for": "Grant McQuay",
+          "prepared_by": "Jacy Hingley",
+          "plan_date": "2025-08-07",
+          "executive_summary": "Persistent odor driven by spring turnover, algal bloom-crash cycles, high-strength industrial loading (butcher/vet/dairy), and cold-weather nitrification failure. Existing Dazzle Sewer Sweetener masks rather than treats. Plan shifts from masking to active mitigation via Lift Station A enzyme pretreatment + 4 anaerobic cells of seasonal bioaugmentation.",
+          "objectives": [
+            "Reduce odor (eliminate Dazzle dependence)",
+            "Reduce wetland inlet ammonia spring peaks (was 23.38 mg/L May 2022)",
+            "Continue sludge reduction (Cell D reduced 1000+ m3 2022-2024)"
+          ],
+          "effluent_samples": [
+            { "date": "2024-05-14", "type": "wetland_inlet", "cbod": 9.8, "tss": 33, "phosphorus_total": 3.941, "ammonia_total": 15.71, "ph": 8.6 },
+            { "date": "2024-09-09", "type": "wetland_inlet", "cbod": 2.4, "tss": 10, "phosphorus_total": 2.015, "ammonia_total": 0.13, "ph": 9.1 },
+            { "date": "2024-05-14", "type": "wetland_north", "cbod": 3, "tss": 5, "phosphorus_total": 2.745, "ammonia_total": 0.11, "ph": 8.2 },
+            { "date": "2024-09-09", "type": "wetland_north", "cbod": 4.3, "tss": 11, "phosphorus_total": 7.189, "ammonia_total": 7.3, "ph": 7.9 },
+            { "date": "2025-05-13", "type": "wetland_north", "cbod": 2.5, "tss": 28, "phosphorus_total": 3.747, "ammonia_total": 0.56 },
+            { "date": "2025-05-13", "type": "wetland_south", "cbod": 2.4, "tss": 2, "phosphorus_total": 2.617, "ammonia_total": 2.61 }
+          ],
+          "tiers": [
+            {
+              "name": "recommended",
+              "dosing_schedules": [
+                { "zone": "Lift Stations A & B", "product_sku": "bug_on_a_rope", "quantity_lbs": 9, "frequency": "every 2-3 months", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+                { "zone": "Lift Station E", "product_sku": "bug_on_a_rope", "quantity_lbs": 3, "frequency": "every 2-3 months", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+                { "zone": "Lift Station B", "product_sku": "vitastim_polar", "quantity_lbs": 4, "frequency": "weekly", "months": [12, 1] },
+                { "zone": "Lift Station A", "product_sku": "greasezilla", "quantity_liters": 4, "frequency": "Tue/Thu", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+                { "zone": "Lift Station B", "product_sku": "greasezilla", "quantity_liters": 2, "frequency": "Tue/Thu", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+                { "zone": "Lift Station A", "product_sku": "qwik_zyme_l", "quantity_liters": 0.5, "frequency": "Tue/Thu", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+                { "zone": "Lift Station A", "product_sku": "qwik_zyme_p", "quantity_liters": 0.5, "frequency": "Mon/Wed/Fri", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+                { "zone": "Cells A-B", "product_sku": "polar_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [5, 6, 10, 11], "notes": "30 lb/month each cell" },
+                { "zone": "Cells C-D", "product_sku": "polar_rx", "quantity_lbs": 40, "frequency": "monthly", "months": [5, 6, 10, 11], "notes": "40 lb/month each cell" },
+                { "zone": "Cells A-B", "product_sku": "sludge_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [7, 8, 9], "notes": "30 lb/month each cell" },
+                { "zone": "Cells C-D", "product_sku": "sludge_rx", "quantity_lbs": 40, "frequency": "monthly", "months": [7, 8, 9], "notes": "40 lb/month each cell" },
+                { "zone": "Cells A-B", "product_sku": "vitastim_polar", "quantity_lbs": 2, "frequency": "weekly", "months": [5, 6, 10, 11], "notes": "2 lb/week each cell" },
+                { "zone": "Cells C-D", "product_sku": "vitastim_polar", "quantity_lbs": 3, "frequency": "weekly", "months": [5, 6, 10, 11], "notes": "3 lb/week each cell" },
+                { "zone": "Cell 5", "product_sku": "vitastim_polar", "quantity_lbs": 11, "frequency": "weekly", "months": [5, 6, 10, 11] },
+                { "zone": "Cell 6", "product_sku": "vitastim_polar", "quantity_lbs": 16, "frequency": "weekly", "months": [5, 6, 10, 11] },
+                { "zone": "Cells A-B", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 2, "frequency": "weekly", "months": [7, 8, 9], "notes": "2 lb/week each cell" },
+                { "zone": "Cells C-D", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 3, "frequency": "weekly", "months": [7, 8, 9], "notes": "3 lb/week each cell" },
+                { "zone": "Cell 5", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 11, "frequency": "weekly", "months": [7, 8, 9] },
+                { "zone": "Cell 6", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 16, "frequency": "weekly", "months": [7, 8, 9] },
+                { "zone": "Lift Station A", "product_sku": "lift_station_aeration", "quantity_units": 1, "frequency": "continuous", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "notes": "Optional but strongly recommended" }
+              ],
+              "pricing": [
+                { "description": "Sludge Rx 30LB Bag", "unit_price": 810, "qty": 15, "subtotal": 12150 },
+                { "description": "VitaStim Polar 30LB Pail", "unit_price": 920, "qty": 20, "subtotal": 18400 },
+                { "description": "VitaStim Sludge Reducer 30LB Pail", "unit_price": 870, "qty": 9, "subtotal": 7830 },
+                { "description": "Qwik-Zyme P 5 Gallon Case", "unit_price": 480, "qty": 5, "subtotal": 2400 },
+                { "description": "Qwik-Zyme L 5 Gallon Case", "unit_price": 350, "qty": 3, "subtotal": 1050 },
+                { "description": "Bug on a Rope Jr (4x3LB)", "unit_price": 540, "qty": 1, "subtotal": 540 },
+                { "description": "Bug on a Rope Sr (4x9LB)", "unit_price": 990, "qty": 2, "subtotal": 1980 },
+                { "description": "GreaseZilla 55 Gal Drum", "unit_price": 3350, "qty": 3, "subtotal": 10050 },
+                { "description": "Lift Station Aeration 120L Pump", "unit_price": 2999, "qty": 1, "subtotal": 2999 },
+                { "description": "Polar Rx 30LB Bag", "unit_price": 890, "qty": 20, "subtotal": 17800 }
+              ],
+              "subtotal": 75199,
+              "volume_discount": -6169.90,
+              "gst": 3451.46,
+              "total": 72480.56,
+              "currency": "CAD"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "town-of-falher",
+      "name": "Town of Falher",
+      "type": "single-use",
+      "status": "active",
+      "province": "AB",
+      "contact_name": "Jessica Hughes",
+      "systems": [
+        {
+          "slug": "falher-lagoon",
+          "name": "Falher Lagoon",
+          "type": "lagoon",
+          "status": "healthy",
+          "population": 1000,
+          "flow_m3_per_day": 320.3,
+          "last_dredged_year": 2020,
+          "industrial_sources": ["butcher shop (since 2020)"],
+          "cells": [
+            { "name": "Cell 1", "area_acres": 0.25, "area_m2": 1000, "volume_m3": 1616, "function": "anaerobic", "retention_days": 5 },
+            { "name": "Cell 2", "area_acres": 0.25, "area_m2": 1000, "volume_m3": 1616, "function": "anaerobic", "retention_days": 5 },
+            { "name": "Cell 3", "area_acres": 0.25, "area_m2": 1000, "volume_m3": 1616, "function": "anaerobic", "retention_days": 5 },
+            { "name": "Cell 4", "area_acres": 0.25, "area_m2": 1000, "volume_m3": 1616, "function": "anaerobic", "retention_days": 5 },
+            { "name": "Cell 5", "area_acres": 6.80, "area_m2": 27500, "volume_m3": 58653, "function": "facultative", "retention_days": 183 },
+            { "name": "Cell 6", "area_acres": 21.62, "area_m2": 87500, "volume_m3": 234369, "function": "storage", "retention_days": 732 }
+          ]
+        }
+      ],
+      "treatment_plans": [
+        {
+          "slug": "falher-2026",
+          "system_slug": "falher-lagoon",
+          "year": 2026,
+          "status": "draft",
+          "prepared_for": "Jessica Hughes",
+          "prepared_by": "Jacy Hingley",
+          "plan_date": "2026-04-09",
+          "executive_summary": "Strong effluent (Oct 2025: BOD<4, TSS 3.4, ammonia 0.20, P 1.17 mg/L) masks early front-end stress: sludge resurfacing in Cells 1-2 after cooling + collection-system flushing. Stronger protein/fat loads from butcher shop. Plan sustains shoulder-season biology in primary cells before storage cell shows effects.",
+          "objectives": [
+            "Stay ahead of front-end sludge accumulation while effluent is still strong",
+            "Sustain cold-weather biology through shoulder seasons",
+            "Spring 2026 sludge survey baseline"
+          ],
+          "effluent_samples": [
+            { "date": "2019-10-31", "type": "effluent", "ammonia_total": 0.445, "bod": null, "tss": null, "ph": 7.95 },
+            { "date": "2020-10-20", "type": "effluent", "ammonia_total": 0.161, "bod": 1.7, "tss": 10.7, "ph": 8.24 },
+            { "date": "2021-10-26", "type": "effluent", "ammonia_total": null, "bod": 11.2, "tss": 126, "ph": 8.1 },
+            { "date": "2022-10-20", "type": "effluent", "ammonia_total": 0.422, "bod": null, "tss": null, "ph": 7.7 },
+            { "date": "2023-10-12", "type": "effluent", "ammonia_total": 0.181, "bod": null, "tss": 4, "ph": 8.17 },
+            { "date": "2024-10-17", "type": "effluent", "ammonia_total": 0.14, "bod": null, "tss": 7.2, "ph": 7.68 },
+            { "date": "2025-09-17", "type": "effluent", "ammonia_total": 1.13, "bod": null, "tss": 15.4, "phosphorus_total": 4.2 },
+            { "date": "2025-10-30", "type": "effluent", "ammonia_total": 0.205, "bod": null, "tss": 3.4, "phosphorus_total": 1.17 }
+          ],
+          "tiers": [
+            {
+              "name": "best",
+              "dosing_schedules": [
+                { "zone": "Main Lift Station", "product_sku": "bug_on_a_rope", "quantity_lbs": 9, "frequency": "as needed", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+                { "zone": "Main Lift Station", "product_sku": "qwik_zyme_l", "quantity_ml": 500, "frequency": "Mon/Wed/Fri", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+                { "zone": "Main Lift Station", "product_sku": "qwik_zyme_p", "quantity_ml": 100, "frequency": "Tue/Thu", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+                { "zone": "Main Lift Station", "product_sku": "vitastim_polar", "quantity_lbs": 1.5, "frequency": "weekly", "months": [12, 1, 2, 3, 4] },
+                { "zone": "Cells 1-4", "product_sku": "vitastim_polar", "quantity_lbs": 0.5, "frequency": "weekly", "months": [5, 6, 10, 11], "notes": "0.5 lb/week each cell" },
+                { "zone": "Cell 5", "product_sku": "vitastim_polar", "quantity_lbs": 3, "frequency": "weekly", "months": [5, 6, 10, 11] },
+                { "zone": "Cells 1-4", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 0.5, "frequency": "weekly", "months": [7, 8, 9], "notes": "0.5 lb/week each cell" },
+                { "zone": "Cell 5", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 5, "frequency": "weekly", "months": [7, 8, 9] },
+                { "zone": "Cells 1-2", "product_sku": "polar_rx", "quantity_lbs": 20, "frequency": "monthly", "months": [5, 6, 10, 11], "notes": "20 lb/month each cell" },
+                { "zone": "Cells 3-4", "product_sku": "polar_rx", "quantity_lbs": 10, "frequency": "monthly", "months": [5, 6, 10, 11], "notes": "10 lb/month each cell" },
+                { "zone": "Cell 5 inlet", "product_sku": "polar_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [5, 6, 10, 11] },
+                { "zone": "Cells 1-2", "product_sku": "sludge_rx", "quantity_lbs": 20, "frequency": "monthly", "months": [7, 8, 9], "notes": "20 lb/month each cell" },
+                { "zone": "Cells 3-4", "product_sku": "sludge_rx", "quantity_lbs": 10, "frequency": "monthly", "months": [7, 8, 9], "notes": "10 lb/month each cell" },
+                { "zone": "Cell 5 inlet", "product_sku": "sludge_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Cells 1-2", "product_sku": "oxypaks_xl", "quantity_lbs": 25, "frequency": "monthly", "months": [5, 6, 7, 8, 9], "notes": "25 lb/month each cell" },
+                { "zone": "Cell 4", "product_sku": "oxypaks_xl", "quantity_lbs": 10, "frequency": "monthly", "months": [5, 6, 7, 8, 9] },
+                { "zone": "Cell 5", "product_sku": "oxypaks_xl", "quantity_lbs": 5, "frequency": "monthly", "months": [5, 6, 7, 8, 9] }
+              ],
+              "pricing": [
+                { "description": "Polar Rx 30LB Bag", "unit_price": 890, "qty": 12, "subtotal": 10680 },
+                { "description": "Sludge Rx 30LB Bag", "unit_price": 810, "qty": 9, "subtotal": 7290 },
+                { "description": "OxyPaks XL 50LB Pail", "unit_price": 600, "qty": 6, "subtotal": 3600 },
+                { "description": "VitaStim Sludge Reducer 30LB Pail", "unit_price": 870, "qty": 4, "subtotal": 3480 },
+                { "description": "VitaStim Polar 30LB Pail", "unit_price": 920, "qty": 4, "subtotal": 3680 },
+                { "description": "Qwik-Zyme P 5 Gal Case", "unit_price": 480, "qty": 1, "subtotal": 480 },
+                { "description": "Qwik-Zyme L 5 Gal Case", "unit_price": 350, "qty": 4, "subtotal": 1400 },
+                { "description": "Bug on a Rope Sr (4x9LB)", "unit_price": 990, "qty": 1, "subtotal": 990 }
+              ],
+              "subtotal": 31600,
+              "gst": 1580,
+              "total": 33180,
+              "currency": "CAD"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "athabasca-county",
+      "name": "Athabasca County",
+      "type": "regional-collection",
+      "status": "prospect",
+      "province": "AB",
+      "contact_name": "Jackson Roth",
+      "systems": [
+        {
+          "slug": "colinton-lagoon",
+          "name": "Colinton Lagoon (Athabasca County)",
+          "type": "lagoon",
+          "status": "critical",
+          "commissioned_year": 1979,
+          "population": 249,
+          "notes": "Originally two-cell, now single cell after emergency berm breach. 40% sludge occupancy.",
+          "cells": [
+            { "name": "Cell 1", "area_acres": 3.68, "area_m2": 14896, "volume_m3": 15950, "function": "facultative", "retention_days": 256, "adjusted_retention_days": 157 },
+            { "name": "Inlet zone", "area_acres": 0.11, "area_m2": 430, "volume_m3": 494, "function": "anaerobic", "retention_days": 8 },
+            { "name": "Truck Dump zone", "area_acres": 0.21, "area_m2": 870, "volume_m3": 1341, "function": "anaerobic", "retention_days": 22 },
+            { "name": "Facultative zone", "area_acres": 0.28, "area_m2": 1130, "volume_m3": 1458, "function": "facultative", "retention_days": 23 }
+          ]
+        },
+        {
+          "slug": "island-lake-lagoon",
+          "name": "Island Lake Lagoon (Athabasca County)",
+          "type": "lagoon",
+          "status": "critical",
+          "population": 175,
+          "flow_m3_per_day": 45,
+          "notes": "No prior biological treatment. 44% sludge occupancy. Cattails at inlet.",
+          "cells": [
+            { "name": "Cell 1", "area_acres": 4.06, "area_m2": 16412, "volume_m3": 13500, "function": "facultative", "retention_days": 308, "adjusted_retention_days": 173, "sludge_volume_m3": 5931 },
+            { "name": "Cell 1 Treatment Zone", "area_acres": 0.74, "area_m2": 3000, "volume_m3": 4971, "function": "facultative", "retention_days": 113 }
+          ]
+        },
+        {
+          "slug": "wandering-river-lagoon",
+          "name": "Wandering River Lagoon (Athabasca County)",
+          "type": "lagoon",
+          "status": "attention",
+          "commissioned_year": 1983,
+          "population": 63,
+          "flow_m3_per_day": 16,
+          "notes": "Sept 2025 effluent crashed (ammonia 54.3, TSS 93, P 11.6) after switch to alternative product disrupted nitrifying community.",
+          "cells": [
+            { "name": "Cell 1", "area_acres": 0.93, "area_m2": 3744, "volume_m3": 5016, "function": "anaerobic", "retention_days": 318, "adjusted_retention_days": 174 },
+            { "name": "Cell 2", "area_acres": 2.73, "area_m2": 11030, "volume_m3": 14540, "function": "storage", "retention_days": 923, "adjusted_retention_days": 730 }
+          ]
+        },
+        {
+          "slug": "grassland-lagoon",
+          "name": "Grassland Lagoon (Athabasca County)",
+          "type": "lagoon",
+          "status": "attention",
+          "population": 46,
+          "flow_m3_per_day": 40,
+          "notes": "Cell 1 sludge doubled 2020-2024. Cell 2 self-reducing. 2025 ammonia and P spiked without treatment.",
+          "cells": [
+            { "name": "Cell 1", "area_acres": 3.23, "area_m2": 13077, "volume_m3": 9330, "function": "anaerobic", "retention_days": 233, "adjusted_retention_days": 211 },
+            { "name": "Cell 2", "area_acres": 7.90, "area_m2": 31968, "volume_m3": 60531, "function": "storage", "retention_days": 1513, "adjusted_retention_days": 1379 }
+          ]
+        },
+        {
+          "slug": "rochester-lagoon",
+          "name": "Rochester Lagoon (Athabasca County)",
+          "type": "lagoon",
+          "status": "healthy",
+          "commissioned_year": 1981,
+          "population": 79,
+          "flow_m3_per_day": 14.4,
+          "notes": "Evaporative (no discharge). Recently dredged Cells 1-2. Garbage causing level pipe blockages.",
+          "cells": [
+            { "name": "Cell 1", "area_acres": 0.13, "area_m2": 518, "volume_m3": 904, "function": "anaerobic", "retention_days": 46, "adjusted_retention_days": 26 },
+            { "name": "Cell 2", "area_acres": 0.12, "area_m2": 466, "volume_m3": 816, "function": "facultative", "retention_days": 41, "adjusted_retention_days": 34 }
+          ]
+        }
+      ],
+      "treatment_plans": [
+        {
+          "slug": "colinton-2026",
+          "system_slug": "colinton-lagoon",
+          "year": 2026,
+          "status": "draft",
+          "prepared_for": "Jackson Roth",
+          "prepared_by": "Jacy Hingley",
+          "plan_date": "2025-12-11",
+          "executive_summary": "Single-cell (post berm breach) with 7,536 m3 sludge (40% of volume). 24-month trend shows BOD +18%, TSS +35%, ammonia +47%, P 2.17 mg/L. TSS:BOD 3.14 indicates algae-dominant. Inlet/truck-dump zones targeted with OxyPaks, Sludge Rx, Polar Rx. Optional Total Floc for P binding.",
+          "effluent_samples": [
+            { "date": "2018-10-16", "type": "effluent", "ammonia_total": 8.06, "bod": 20.30, "tss": 42 },
+            { "date": "2020-07-15", "type": "effluent", "ammonia_total": 3.24, "bod": 26.3, "tss": 48, "ph": 7.21, "cod": 138 },
+            { "date": "2023-10-05", "type": "effluent", "ammonia_total": 4.7, "bod": 18.6, "tss": 51, "cod": 109 },
+            { "date": "2025-10-17", "type": "effluent", "ammonia_total": 6.89, "bod": 22, "tss": 69, "cod": 160, "phosphorus_total": 2.17 }
+          ],
+          "sludge_surveys": [
+            { "cell": "Cell 1", "year": 2019, "volume_m3": 6172 },
+            { "cell": "Cell 1", "year": 2023, "volume_m3": 7637 },
+            { "cell": "Cell 1", "year": 2025, "volume_m3": 7536 }
+          ],
+          "tiers": [
+            {
+              "name": "recommended",
+              "dosing_schedules": [
+                { "zone": "Collection System", "product_sku": "vitastim_polar", "quantity_lbs": 1, "frequency": "weekly", "months": [12, 1] },
+                { "zone": "Inlet", "product_sku": "polar_rx", "quantity_lbs": 5, "frequency": "monthly", "months": [5, 6, 10, 11] },
+                { "zone": "Truck Dump", "product_sku": "polar_rx", "quantity_lbs": 5, "frequency": "monthly", "months": [5, 6, 10, 11] },
+                { "zone": "Facultative Zone", "product_sku": "polar_rx", "quantity_lbs": 5, "frequency": "monthly", "months": [5, 6, 10, 11] },
+                { "zone": "Inlet", "product_sku": "sludge_rx", "quantity_lbs": 5, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Truck Dump", "product_sku": "sludge_rx", "quantity_lbs": 5, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Facultative Zone", "product_sku": "sludge_rx", "quantity_lbs": 5, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Inlet", "product_sku": "oxypaks_xl", "quantity_lbs": 10, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Truck Dump", "product_sku": "oxypaks_xl", "quantity_lbs": 20, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Facultative Zone", "product_sku": "oxypaks_xl", "quantity_lbs": 25, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Inlet", "product_sku": "vitastim_polar", "quantity_lbs": 0.5, "frequency": "weekly", "months": [5, 6, 10, 11] },
+                { "zone": "Truck Dump", "product_sku": "vitastim_polar", "quantity_lbs": 0.5, "frequency": "weekly", "months": [5, 6, 10, 11] },
+                { "zone": "Facultative Zone", "product_sku": "vitastim_polar", "quantity_lbs": 1, "frequency": "weekly", "months": [5, 6, 10, 11] },
+                { "zone": "Inlet", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 0.5, "frequency": "weekly", "months": [7, 8, 9] },
+                { "zone": "Truck Dump", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 0.5, "frequency": "weekly", "months": [7, 8, 9] },
+                { "zone": "Facultative Zone", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 1, "frequency": "weekly", "months": [7, 8, 9] },
+                { "zone": "Cell 1", "product_sku": "total_floc", "quantity_gallons": 55, "frequency": "once", "months": [4], "notes": "Optional; one application in spring" }
+              ],
+              "pricing": [
+                { "description": "Polar Rx 30LB Bag", "unit_price": 890, "qty": 2, "subtotal": 1780 },
+                { "description": "Sludge Rx 30LB Bag", "unit_price": 810, "qty": 2, "subtotal": 1620 },
+                { "description": "VitaStim Polar 30LB Pail", "unit_price": 920, "qty": 2, "subtotal": 1840 },
+                { "description": "VitaStim Sludge Reducer 30LB Pail", "unit_price": 870, "qty": 1, "subtotal": 870 },
+                { "description": "OxyPaks 50LB Pail", "unit_price": 600, "qty": 5, "subtotal": 3000 },
+                { "description": "Total Floc 55 Gal Drum (optional)", "unit_price": 6810, "qty": 1, "subtotal": 6810 }
+              ],
+              "subtotal": 15920,
+              "gst": 796,
+              "total": 16716,
+              "currency": "CAD"
+            }
+          ]
+        },
+        {
+          "slug": "island-lake-2026",
+          "system_slug": "island-lake-lagoon",
+          "year": 2026,
+          "status": "draft",
+          "prepared_for": "Jackson Roth",
+          "prepared_by": "Jacy Hingley",
+          "plan_date": "2025-12-11",
+          "executive_summary": "Largest capacity constraint in county: 44% sludge volume, 5,931 m3 accumulated, only 7,570 m3 effective water. Cattails at inlet are symptom of sludge platforms. Inlet-focused bioaugmentation to reclaim capacity.",
+          "sludge_surveys": [{ "cell": "Cell 1", "year": 2025, "volume_m3": 5931 }],
+          "tiers": [
+            {
+              "name": "recommended",
+              "dosing_schedules": [
+                { "zone": "Cell 1", "product_sku": "polar_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [5, 6, 10, 11] },
+                { "zone": "Cell 1", "product_sku": "sludge_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Cell 1", "product_sku": "oxypaks_xl", "quantity_lbs": 50, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Cell 1", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 2, "frequency": "weekly", "months": [7, 8, 9] }
+              ],
+              "pricing": [
+                { "description": "Polar Rx 30LB Bag", "unit_price": 890, "qty": 4, "subtotal": 3560 },
+                { "description": "Sludge Rx 30LB Bag", "unit_price": 810, "qty": 3, "subtotal": 2430 },
+                { "description": "OxyPaks XL 50LB Pail", "unit_price": 600, "qty": 4, "subtotal": 2400 },
+                { "description": "VitaStim Sludge Reducer 30LB Pail", "unit_price": 870, "qty": 1, "subtotal": 870 },
+                { "description": "VitaStim Polar 30LB Pail (optional)", "unit_price": 920, "qty": 2, "subtotal": 1840 }
+              ],
+              "subtotal": 11100,
+              "gst": 555,
+              "total": 11655,
+              "currency": "CAD"
+            }
+          ]
+        },
+        {
+          "slug": "wandering-river-2026",
+          "system_slug": "wandering-river-lagoon",
+          "year": 2026,
+          "status": "draft",
+          "prepared_for": "Jackson Roth",
+          "prepared_by": "Jacy Hingley",
+          "plan_date": "2025-12-11",
+          "executive_summary": "2023-2024 sludge reduced 1,100 m3 (no mechanical dredge). 2025 effluent crashed after switch to alternative product disrupted nitrifying community. Plan rebuilds stable nitrifying biomass while continuing gradual sludge reduction. BEST tier adds 3x Total Floc; GOOD tier uses Polar/Nature's Blend.",
+          "effluent_samples": [
+            { "date": "2018-10-17", "type": "effluent", "bod": 27.10, "tss": 24, "ammonia_total": 10.40 },
+            { "date": "2020-10-19", "type": "effluent", "bod": 8.4, "tss": 6, "ammonia_total": 12.1, "ph": 7.32 },
+            { "date": "2025-09-18", "type": "effluent", "bod": null, "tss": 93, "ammonia_total": 54.3, "phosphorus_total": 11.6, "cod": 263, "notes": "Nitrification failed - alternative product disruption" }
+          ],
+          "sludge_surveys": [
+            { "cell": "Cell 1", "year": 2023, "volume_m3": 2273 },
+            { "cell": "Cell 1", "year": 2024, "volume_m3": 1972 },
+            { "cell": "Cell 2", "year": 2023, "volume_m3": 3037 },
+            { "cell": "Cell 2", "year": 2024, "volume_m3": 2192 }
+          ],
+          "tiers": [
+            {
+              "name": "best",
+              "dosing_schedules": [
+                { "zone": "Collection System", "product_sku": "vitastim_polar", "quantity_lbs": 2, "frequency": "weekly", "months": [12, 1] },
+                { "zone": "Main Lift Station", "product_sku": "bug_on_a_rope", "quantity_lbs": 3, "frequency": "every 2-3 months", "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+                { "zone": "Cell 1", "product_sku": "polar_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [5, 6, 10, 11] },
+                { "zone": "Cell 1", "product_sku": "sludge_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Cells 1-2", "product_sku": "vitastim_polar", "quantity_lbs": 5, "frequency": "weekly", "months": [5, 6, 10, 11], "notes": "5 lb/week each cell" },
+                { "zone": "Cells 1-2", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 5, "frequency": "weekly", "months": [7, 8, 9], "notes": "5 lb/week each cell" },
+                { "zone": "Lagoon", "product_sku": "total_floc", "quantity_gallons": 165, "frequency": "once", "months": [4] }
+              ],
+              "pricing": [
+                { "description": "Polar Rx 30LB Bag", "unit_price": 890, "qty": 4, "subtotal": 3560 },
+                { "description": "Sludge Rx 30LB Bag", "unit_price": 810, "qty": 3, "subtotal": 2430 },
+                { "description": "VitaStim Polar 30LB Pail", "unit_price": 920, "qty": 7, "subtotal": 6440 },
+                { "description": "VitaStim Sludge Reducer 30LB Pail", "unit_price": 870, "qty": 5, "subtotal": 4350 },
+                { "description": "Bug on a Rope Jr (4x3LB)", "unit_price": 540, "qty": 1, "subtotal": 540 },
+                { "description": "Total Floc 55 Gal Drum", "unit_price": 6810, "qty": 3, "subtotal": 20430 }
+              ],
+              "subtotal": 37750,
+              "gst": 1887.50,
+              "total": 39637.50,
+              "currency": "CAD"
+            },
+            {
+              "name": "good",
+              "dosing_schedules": [
+                { "zone": "Cell 1", "product_sku": "sludge_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Cells 1-2", "product_sku": "vitastim_polar", "quantity_lbs": 5, "frequency": "weekly", "months": [5, 6, 10, 11], "notes": "5 lb/week each cell" },
+                { "zone": "Cells 1-2", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 5, "frequency": "weekly", "months": [7, 8, 9], "notes": "5 lb/week each cell" },
+                { "zone": "Cell 2", "product_sku": "polar_blend", "quantity_lbs": 16, "frequency": "twice monthly", "months": [5, 6, 10, 11] },
+                { "zone": "Cell 2", "product_sku": "natures_blend", "quantity_lbs": 16, "frequency": "twice monthly", "months": [7, 8, 9] }
+              ],
+              "pricing": [
+                { "description": "Sludge Rx 30LB Bag", "unit_price": 810, "qty": 3, "subtotal": 2430 },
+                { "description": "VitaStim Polar 30LB Pail", "unit_price": 920, "qty": 7, "subtotal": 6440 },
+                { "description": "VitaStim Sludge Reducer 30LB Pail", "unit_price": 870, "qty": 2, "subtotal": 1740 },
+                { "description": "Nature's Blend 30LB Pail", "unit_price": 479, "qty": 4, "subtotal": 1916 },
+                { "description": "Polar Blend 30LB Pail", "unit_price": 535, "qty": 5, "subtotal": 2675 }
+              ],
+              "subtotal": 15201,
+              "gst": 760.05,
+              "total": 15961.05,
+              "currency": "CAD"
+            }
+          ]
+        },
+        {
+          "slug": "grassland-2026",
+          "system_slug": "grassland-lagoon",
+          "year": 2026,
+          "status": "draft",
+          "prepared_for": "Jackson Roth",
+          "prepared_by": "Jacy Hingley",
+          "plan_date": "2025-12-11",
+          "executive_summary": "Cell 1 sludge 898 m3 (2020) -> 1,950 m3 (2024). Cell 2 self-reducing. 2025 ammonia surged 1,743% (0.07 -> 1.29) and P +152% without treatment. Focus on anaerobic Cell 1.",
+          "effluent_samples": [
+            { "date": "2018-10-16", "type": "effluent", "bod": 2.6, "tss": 3.7 },
+            { "date": "2020-10-14", "type": "effluent", "bod": 4.6, "tss": 6.7, "ammonia_total": 0.358, "cod": 82, "ph": 7.91 },
+            { "date": "2024-09-30", "type": "effluent", "bod": 2.8, "tss": 3.6, "ammonia_total": 0.07, "phosphorus_total": 1.01, "cod": 94 },
+            { "date": "2025-09-18", "type": "effluent", "bod": null, "tss": null, "ammonia_total": 1.29, "phosphorus_total": 2.55, "cod": 68 }
+          ],
+          "sludge_surveys": [
+            { "cell": "Cell 1", "year": 2020, "volume_m3": 898 },
+            { "cell": "Cell 1", "year": 2024, "volume_m3": 1950 },
+            { "cell": "Cell 2", "year": 2020, "volume_m3": 5367 },
+            { "cell": "Cell 2", "year": 2024, "volume_m3": 3078 }
+          ],
+          "tiers": [
+            {
+              "name": "best",
+              "dosing_schedules": [
+                { "zone": "Collection System", "product_sku": "vitastim_polar", "quantity_lbs": 1, "frequency": "weekly", "months": [12, 1] },
+                { "zone": "Cell 1", "product_sku": "polar_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [5, 6, 10, 11] },
+                { "zone": "Cell 1", "product_sku": "sludge_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Cell 1", "product_sku": "oxypaks_xl", "quantity_lbs": 50, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Cell 1", "product_sku": "vitastim_polar", "quantity_lbs": 3, "frequency": "weekly", "months": [5, 6, 10, 11] },
+                { "zone": "Cell 1", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 3, "frequency": "weekly", "months": [7, 8, 9] }
+              ],
+              "pricing": [
+                { "description": "Polar Rx 30LB Bag", "unit_price": 890, "qty": 4, "subtotal": 3560 },
+                { "description": "Sludge Rx 30LB Bag", "unit_price": 810, "qty": 3, "subtotal": 2430 },
+                { "description": "VitaStim Polar 30LB Pail", "unit_price": 920, "qty": 3, "subtotal": 2760 },
+                { "description": "VitaStim Sludge Reducer 30LB Pail", "unit_price": 870, "qty": 2, "subtotal": 1740 },
+                { "description": "OxyPaks 50LB Pail", "unit_price": 600, "qty": 4, "subtotal": 2400 }
+              ],
+              "subtotal": 12890,
+              "gst": 644.50,
+              "total": 13534.50,
+              "currency": "CAD"
+            },
+            {
+              "name": "good",
+              "dosing_schedules": [
+                { "zone": "Cell 1", "product_sku": "sludge_rx", "quantity_lbs": 30, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Cell 1", "product_sku": "vitastim_polar", "quantity_lbs": 3, "frequency": "weekly", "months": [5, 6, 10, 11] },
+                { "zone": "Cell 1", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 3, "frequency": "weekly", "months": [7, 8, 9] }
+              ],
+              "pricing": [
+                { "description": "Sludge Rx 30LB Bag", "unit_price": 810, "qty": 3, "subtotal": 2430 },
+                { "description": "VitaStim Polar 30LB Pail", "unit_price": 920, "qty": 3, "subtotal": 2760 },
+                { "description": "VitaStim Sludge Reducer 30LB Pail", "unit_price": 870, "qty": 2, "subtotal": 1740 }
+              ],
+              "subtotal": 6930,
+              "gst": 346.50,
+              "total": 7276.50,
+              "currency": "CAD"
+            }
+          ]
+        },
+        {
+          "slug": "rochester-2026",
+          "system_slug": "rochester-lagoon",
+          "year": 2026,
+          "status": "draft",
+          "prepared_for": "Jackson Roth",
+          "prepared_by": "Jacy Hingley",
+          "plan_date": "2025-12-11",
+          "executive_summary": "Evaporative system (no discharge). Recently dredged. Two-week intensive post-dredge schedule plus autumn stabilization. No effluent data due to no discharge.",
+          "sludge_surveys": [
+            { "cell": "Cell 1", "year": 2023, "volume_m3": 419 },
+            { "cell": "Cell 1", "year": 2024, "volume_m3": 397 },
+            { "cell": "Cell 2", "year": 2023, "volume_m3": 144 },
+            { "cell": "Cell 2", "year": 2024, "volume_m3": 146 }
+          ],
+          "tiers": [
+            {
+              "name": "recommended",
+              "dosing_schedules": [
+                { "zone": "Cell 1", "product_sku": "polar_rx", "quantity_lbs": 5, "frequency": "monthly", "months": [5, 6, 10, 11] },
+                { "zone": "Cell 1", "product_sku": "sludge_rx", "quantity_lbs": 5, "frequency": "monthly", "months": [7, 8, 9] },
+                { "zone": "Cells 1-2", "product_sku": "vitastim_sludge_reducer", "quantity_lbs": 0.5, "frequency": "weekly", "months": [7, 8, 9], "notes": "0.5 lb/week each cell" }
+              ],
+              "pricing": [
+                { "description": "Polar Rx 30LB Bag", "unit_price": 890, "qty": 1, "subtotal": 890 },
+                { "description": "Sludge Rx 30LB Bag", "unit_price": 810, "qty": 1, "subtotal": 810 },
+                { "description": "VitaStim Sludge Reducer 30LB Pail", "unit_price": 870, "qty": 1, "subtotal": 870 }
+              ],
+              "subtotal": 2570,
+              "gst": 128.50,
+              "total": 2698.50,
+              "currency": "CAD"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "missing_sites": [
+    { "name": "Sundre", "notes": "Plan not yet provided" },
+    { "name": "Parkland County", "notes": "Plan not yet provided" }
+  ]
+}

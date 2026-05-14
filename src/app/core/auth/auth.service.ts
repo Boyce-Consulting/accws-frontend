@@ -230,7 +230,41 @@ export class AuthService {
       );
   }
 
+  /**
+   * Synthesize a session in static-data mode (no backend). Pulls memberships
+   * from the pilot dataset so org-scoped routes work. Idempotent.
+   *
+   * Role defaults to 'admin' so the "View as client" toggle is available.
+   * Pass 'client' to mimic a real client login (no admin UI at all). The
+   * choice can also be overridden at runtime via the ?role=client|admin URL
+   * query param (persisted to localStorage).
+   */
+  pilotBootstrap(memberships: OrganizationMembership[], role: UserRole = 'admin'): void {
+    const isAdmin = role === 'admin';
+    const fakeUser: User = {
+      id: isAdmin ? 'pilot-admin' : 'pilot-client',
+      name: isAdmin ? 'Pilot Tester' : 'Pilot Client',
+      email: isAdmin ? 'pilot@accws.local' : 'client@accws.local',
+      role,
+      organizations: memberships,
+      clientId: memberships[0]?.id,
+    };
+    this._token.set('pilot-mode-token');
+    localStorage.setItem(JWT_STORAGE_KEY, 'pilot-mode-token');
+    this._currentUser.set(fakeUser);
+    this._organizations.set(memberships);
+    this.reconcileCurrentOrg(memberships);
+    // The "View as client" toggle only makes sense for actual admins.
+    // Clear it when bootstrapping as a real client so the UI doesn't show
+    // the "Admin (viewing as client)" badge.
+    if (!isAdmin) this.setViewAsClient(false);
+  }
+
   loadMe(): Observable<User | null> {
+    if (environment.useStaticData) {
+      // In static mode, /me is not available. Return the cached user (or null).
+      return of(this._currentUser());
+    }
     return this.http.get<MeResponse>(`${this.apiUrl}/me`).pipe(
       map((res) => {
         const memberships = (res.organizations ?? []).map(mapMembership);
