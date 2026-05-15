@@ -1,0 +1,1 @@
+import{t as o}from"./chunk-SNKP2Q3T.js";var e={production:!0,apiBaseUrl:"https://accws-backend.on-forge.com/api",googleClientId:"892122916055-240981kfd9e87q5uoblt2gi8bg2mf8le.apps.googleusercontent.com"};var c=new o("API_BASE_URL",{providedIn:"root",factory:()=>e.apiBaseUrl}),i="accws_jwt";export{e as a,c as b,i as c};

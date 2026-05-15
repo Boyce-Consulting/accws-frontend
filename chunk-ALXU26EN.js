@@ -1,0 +1,1 @@
+var c={1:"Mon",2:"Tue",3:"Wed",4:"Thu",5:"Fri",6:"Sat",7:"Sun"},t={daily:"Daily",weekly:"Weekly",biweekly:"Biweekly",monthly:"Monthly",custom:""};function u(e){let y=t[e.frequencyType];if(e.frequencyType==="custom"||!y)return e.frequency;let n=e.daysOfWeek.filter(r=>r>=1&&r<=7).map(r=>c[r]).join(", ");return n?`${y} \xB7 ${n}`:y}export{u as a};
