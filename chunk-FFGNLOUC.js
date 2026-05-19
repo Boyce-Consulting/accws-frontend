@@ -1,0 +1,1 @@
+import{E as i,T as n}from"./chunk-YFKKBMOD.js";var l=class t{_title=n(null);title=this._title.asReadonly();set(e){this._title.set(e)}static \u0275fac=function(o){return new(o||t)};static \u0275prov=i({token:t,factory:t.\u0275fac,providedIn:"root"})};export{l as a};
